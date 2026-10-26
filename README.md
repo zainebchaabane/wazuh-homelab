@@ -1,7 +1,11 @@
 # Wazuh Homelab
 
 ## Overview
-This repository documents a homelab built with Wazuh to monitor Windows 10 endpoint activity, simulate RDP brute-force attempt, and observe how Wazuh detects it. 
+This repository documents a homelab built with Wazuh to monitor Windows 10 endpoint activity, simulate RDP brute-force attempt, and observe how Wazuh detects it.It configures also  both Wazuh capabilities File Integrity Monitoring (FIM) and automated threat mitigation via Active Response.
+
+---
+
+## Lab Architecture
 
 This lab was inspired by the following [tutorial](https://youtu.be/KTAqe2fJmsE)
 ## Lab Architecture
@@ -49,5 +53,11 @@ The event details captured:
 
 ## Recommended Mitigations( MITRE ATT&CK )
 -**Account Lockout Policy**: Configure appropriate account lockout thresholds and durations to limit repeated password-guessing attempts.
-
 -**Multi-Factor Authentication**
+### File Integrity Monitoring (FIM)
+Wazuh tracked real-time modifications in `C:\Secret` direcotry on Windows 10 VM.
+### File Integrity Monitoring (FIM)
+### Active Response
+Configured Wazuh to automatically mitigate  RDP attack by isolating the attacker's source IP address upon alert. 
+![](/screenshots/active-response.png)
+
