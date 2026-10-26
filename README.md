@@ -56,7 +56,6 @@ The event details captured:
 -**Multi-Factor Authentication**
 ### File Integrity Monitoring (FIM)
 Wazuh tracked real-time modifications in `C:\Secret` direcotry on Windows 10 VM.
-### File Integrity Monitoring (FIM)
 ### Active Response
 Configured Wazuh to automatically mitigate  RDP attack by isolating the attacker's source IP address upon alert. 
 ![](/screenshots/active-response.png)
